@@ -38,6 +38,7 @@ public class EmployeeServicesTest
             Id = 1,
             Name = "Amit",
             Address = "Amroli"
+
         };
         _employeeRepository.Setup(x => x.GetEmployeeById(1)).ReturnsAsync(employee);
         var _employeeServices = new EmployeeServices(_employeeRepository.Object, mapper, null, _imageUploadHelper.Object);
@@ -93,7 +94,7 @@ public class EmployeeServicesTest
         var _employeeServices = new EmployeeServices(_employeeRepository.Object, mapper, null, _imageUploadHelper.Object);
         await Assert.ThrowsAsync<NullReferenceException>(async () => await _employeeServices.GetEmployeesAsync());
     }
-
+     
     [Fact]
     public async Task AddEmployeeAsync_Test()
     {
