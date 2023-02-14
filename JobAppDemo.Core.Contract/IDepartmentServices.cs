@@ -6,6 +6,7 @@ namespace JobAppDemo.Core.Contract
 {
     public interface IDepartmentServices
     {
+        //Department Service Interface
         Task <List<DepartmentResponseModel>> GetDepartmentsAsync();
         Task<DepartmentResponseModel> GetDepartmentByIdAsync(int id);
 
