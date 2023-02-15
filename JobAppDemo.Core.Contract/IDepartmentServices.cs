@@ -10,6 +10,8 @@ namespace JobAppDemo.Core.Contract
         Task <List<DepartmentResponseModel>> GetDepartmentsAsync();
         Task<DepartmentResponseModel> GetDepartmentByIdAsync(int id);
 
+        //ShubhamDesai
+
         Task AddDepartmentAsync(DepartmentRequestModel department);
 
         Task UpdateDepartmentAsync(DepartmentRequestModel department,int id);
